@@ -100,15 +100,6 @@ TEMP_DIR=$(mktemp -d)
 # including "." and with the exception of ".git/"
 mv "$CLONE_DIR/.git" "$TEMP_DIR/.git"
 
-# $TARGET_DIRECTORY is '' by default
-ABSOLUTE_TARGET_DIRECTORY="$CLONE_DIR/$TARGET_DIRECTORY/"
-
-echo "[+] Deleting $ABSOLUTE_TARGET_DIRECTORY"
-rm -rf "$ABSOLUTE_TARGET_DIRECTORY"
-
-echo "[+] Creating (now empty) $ABSOLUTE_TARGET_DIRECTORY"
-mkdir -p "$ABSOLUTE_TARGET_DIRECTORY"
-
 echo "[+] Listing Current Directory Location"
 ls -al
 
